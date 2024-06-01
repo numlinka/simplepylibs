@@ -2,14 +2,6 @@
 # simplepylibs by numlinka.
 # internationalization
 
-__name__ = "internationalization"
-__version__ = "1.1"
-__author__ = "numlinka"
-__license__ = "LGPL 3.0"
-__copyright__ = "Copyright (C) 2022 numlinka"
-
-version = (1, 1)
-
 # std
 import os
 import threading
@@ -17,10 +9,19 @@ from typing import Any
 
 # requirements
 try:
-    from . import strutils
+    import strutils
 
 except ImportError as _:
-    import strutils
+    from . import strutils
+
+
+__name__ = "internationalization"
+__author__ = "numlinka"
+__license__ = "LGPL 3.0"
+__copyright__ = "Copyright (C) 2022 numlinka"
+
+__version_info__ = (1, 1, 1)
+__version__ = ".".join(map(str, __version_info__))
 
 
 class I18nString (str): ...

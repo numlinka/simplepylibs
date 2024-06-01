@@ -2,19 +2,21 @@
 # simplepylibs by numlinka.
 # ezconfiguration
 
+# std
+import copy
+import json
+import threading
+from typing import Any, Iterable, Mapping
+
+
 __name__ = "ezconfiguration"
 __version__ = "1.3.0"
 __author__ = "numlinka"
 __license__ = "LGPL 3.0"
 __copyright__ = "Copyright (C) 2022 numlinka"
 
-version = (1, 3, 0)
-
-# std
-import copy
-import json
-import threading
-from typing import Any, Iterable, Mapping
+__version_info__ = (1, 3, 1)
+__version__ = ".".join(map(str, __version_info__))
 
 
 class keys (object):

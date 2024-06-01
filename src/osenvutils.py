@@ -2,14 +2,6 @@
 # simplepylibs by numlinka.
 # osenvutils
 
-__name__ = "osenvutils"
-__version__ = "1.1.2"
-__author__ = "numlinka"
-__license__ = "LGPL 3.0"
-__copyright__ = "Copyright (C) 2022 numlinka"
-
-version = (1, 1, 2)
-
 # std
 import os
 import sys
@@ -18,6 +10,15 @@ import datetime
 import subprocess
 import time as _time
 from typing import Any
+
+
+__name__ = "osenvutils"
+__author__ = "numlinka"
+__license__ = "LGPL 3.0"
+__copyright__ = "Copyright (C) 2022 numlinka"
+
+__version_info__ = (1, 1, 4)
+__version__ = ".".join(map(str, __version_info__))
 
 
 class DateTimeVariable (object):
@@ -149,23 +150,15 @@ def get_locale_alias() -> str:
     return ors.split(".")[0]
 
 
-
-now = DateTimeVariable()
 UUID = get_system_uuid()
-
-CURRENT_WORKING_DIRECTORY = os.getcwd()
-CWD = CURRENT_WORKING_DIRECTORY
-
 LOCALE_NAME = locale.getlocale()[0]
 LOCALE_ALIAS = get_locale_alias()
-ENCODEING = locale.getencoding()
+ENCODING = locale.getencoding()
 
 
 __all__ = [
     "UUID",
-    "CWD",
-    "CURRENT_WORKING_DIRECTORY",
     "LOCALE_NAME",
     "LOCALE_ALIAS",
-    "ENCODEING"
+    "ENCODING"
 ]

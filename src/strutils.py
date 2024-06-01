@@ -2,13 +2,14 @@
 # simplepylibs by numlinka.
 # strutils
 
+
 __name__ = "strutils"
-__version__ = "1.0"
 __author__ = "numlinka"
 __license__ = "LGPL 3.0"
 __copyright__ = "Copyright (C) 2022 numlinka"
 
-version = (1, 0)
+__version_info__ = (1, 0, 1)
+__version__ = ".".join(map(str, __version_info__))
 
 
 def escape_character_recognition(value: str) -> str:

@@ -7,7 +7,7 @@ import os
 import unittest
 
 # tests
-from ezdirectory import *
+from dirstruct import *
 
 
 class TestDirectory (unittest.TestCase):
@@ -25,7 +25,7 @@ class TestDirectory (unittest.TestCase):
         file_name = "file_name"
         current_working_directory = os.getcwd()
 
-        class TestDirectoryPlus (DirectoryPlus):
+        class TestDirectoryPlus (Directory):
             file = FilePath(file_name)
 
         cwd = TestDirectoryPlus(current_working_directory)
